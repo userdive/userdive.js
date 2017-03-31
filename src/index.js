@@ -10,19 +10,21 @@ export function inject (source: string, attributes: Object) {
   element.defer = 1
   element.src = source
   element.charset = 'UTF-8'
-  Object.keys(key => {
+  Object.keys(attributes).forEach(key => {
     element.setAttribute(key, attributes[key])
   })
   script.parentNode.insertBefore(element, script)
 }
 
-export default function (name: string, source: string, prefix: string): Function {
+export function factory (name: string = '_ud', source: string = 'https://cdn.userdive.com/agent.js', prefix: string = ''): Function {
   const global = window
   if (!global[name]) {
     global[name] = global[name] || function () {
       (global[name].q = global[name].q || []).push(arguments)
     }
-    inject(source || 'https://cdn.userdive.com/agent.js', {'data-ud-namespace': name})
+    inject(source, {'data-ud-namespace': name})
   }
   return global[name]
 }
+
+export default factory()
