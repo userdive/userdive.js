@@ -3,8 +3,10 @@ import { describe, it } from 'mocha'
 import { internet } from 'faker'
 import assert from 'assert'
 
+import userdive from '../src'
+
 describe('aync loader', () => {
-  const _ud = require('../src').default
+  const _ud = userdive()
   const NAMESPACE = `data-ud-namespace`
 
   it('entrypoint', () => {

@@ -16,7 +16,9 @@ export function inject (source: string, attributes: Object) {
   script.parentNode.insertBefore(element, script)
 }
 
-export function factory (name: string = '_ud', source: string = 'https://cdn.userdive.com/agent.js', prefix: string = ''): Function {
+export default function factory (name: ?string, source: ?string): Function {
+  name = name || '_ud'
+  source = source || 'https://cdn.userdive.com/agent.js'
   const global = window
   if (!global[name]) {
     global[name] = global[name] || function () {
@@ -26,5 +28,3 @@ export function factory (name: string = '_ud', source: string = 'https://cdn.use
   }
   return global[name]
 }
-
-export default factory()
