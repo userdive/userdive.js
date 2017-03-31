@@ -1,10 +1,10 @@
 {
-  "name": "@userdive/async",
+  "name": "userdive",
   "description": "load @userdve/agent from cdn",
   "version": "0.0.1",
   "author": "UNCOVER TRUTH Inc",
   "bugs": {
-    "url": "https://github.com/userdive/async.js/issues"
+    "url": "https://github.com/userdive/userdive.js/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -33,7 +33,7 @@
   "files": [
     "lib/"
   ],
-  "homepage": "https://github.com/userdive/async.js#readme",
+  "homepage": "https://github.com/userdive/userdive.js#readme",
   "keywords": [
     "userdive"
   ],
@@ -41,7 +41,7 @@
   "main": " lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/userdive/async.js.git"
+    "url": "git+ssh://git@github.com/userdive/userdive.js.git"
   },
   "scripts": {
     "build": "npm-run-all build:*",
