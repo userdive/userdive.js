@@ -1,5 +1,6 @@
-/* @flow */
+/*! @userdive/async | Copyright (c) UNCOVER TRUTH Inc. */
 
+/* @flow */
 const TAG_NAME = 'script'
 
 export function inject (source: string, attributes: Object) {
