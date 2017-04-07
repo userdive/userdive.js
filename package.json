@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@uncovertruth/eslint-config-flowtype": "^1.0.0-beta.0",
+    "@uncovertruth/eslint-config-flowtype": "^1.0.0",
     "babel-cli": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
