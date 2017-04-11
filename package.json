@@ -11,7 +11,7 @@
     "@uncovertruth/eslint-config-flowtype": "^1.0.0-beta.0",
     "babel-cli": "^6.24.1",
     "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-power-assert": "^1.0.0",
     "cross-env": "^4.0.0",
