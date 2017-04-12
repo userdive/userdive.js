@@ -1,7 +1,6 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    hostname: 'www.0.0.0.0.xip.io',
     frameworks: ['mocha'],
     files: [
       { pattern: 'test/*.test.js' }
