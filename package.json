@@ -17,7 +17,7 @@
     "cross-env": "^5.0.0",
     "eslint": "^3.19.0",
     "faker": "^4.1.0",
-    "flow-bin": "^0.45.0",
+    "flow-bin": "^0.47.0",
     "karma": "^1.6.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-firefox-launcher": "^1.0.1",
