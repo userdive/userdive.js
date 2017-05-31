@@ -59,6 +59,6 @@
     "test:build": "npm-run-all clean build",
     "test:karma": "karma start --single-run",
     "test:lint": "npm-run-all -p lint:*",
-    "test:ts": "tsc test/compile.test.ts"
+    "test:ts": "tsc types/test/*.test.ts"
   }
 }

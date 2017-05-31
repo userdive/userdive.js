@@ -77,13 +77,9 @@ declare namespace _ud {
     env: ClientEnvironmentsData,
     custom: CustomData
   }
-  type SetCustomVar = 'setCustomVar'
-  type ChangeVirtualUrl = 'changeVirtualUrl'
   interface USERDIVEObject {
     (command: Command, trackingId: string | ConfigIds, config?: ConfigFields): void
     (command: Send, sendType: string, pageUrl: string): void
     (command: Set, key: any, value?: string | number): State
-    (command: SetCustomVar, customVar: CustomVar): void
-    (command: ChangeVirtualUrl, url: string): void
   }
 }
