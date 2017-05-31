@@ -6,6 +6,7 @@
   "bugs": {
     "url": "https://github.com/userdive/userdive.js/issues"
   },
+  "typings": "types/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@uncovertruth/eslint-config-flowtype": "^1.0.0",
@@ -29,6 +30,7 @@
     "npm-run-all": "^4.0.2",
     "power-assert": "^1.4.2",
     "rimraf": "^2.6.1",
+    "typescript": "^2.3.4",
     "webpack": "^2.4.1"
   },
   "files": [
@@ -56,6 +58,7 @@
     "test": "npm-run-all -p test:*",
     "test:build": "npm-run-all clean build",
     "test:karma": "karma start --single-run",
-    "test:lint": "npm-run-all -p lint:*"
+    "test:lint": "npm-run-all -p lint:*",
+    "test:ts": "tsc test/compile.test.ts"
   }
 }
