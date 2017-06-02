@@ -54,10 +54,11 @@
     "lint": "npm run test:lint",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
+    "pretest": "npm run build",
     "test": "npm-run-all -p test:*",
     "test:build": "npm-run-all clean build",
     "test:karma": "karma start --single-run",
     "test:lint": "npm-run-all -p lint:*",
-    "test:ts": "tsc types/index.ts --allowJs"
+    "test:ts": "tsc types/index.ts --allowJs --noEmit --noImplicitAny types/index.ts"
   }
 }

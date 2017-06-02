@@ -1,4 +1,4 @@
-import userdive from '../src'
+import userdive from '../lib'
 
 const _ud = userdive()
 
