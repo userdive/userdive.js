@@ -4,7 +4,10 @@
     "module": "commonjs",
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "noEmit": true
+    "noEmit": true,
+    "lib": [
+      "es2015"
+    ]
   },
   "files": [
     "types/index.ts"

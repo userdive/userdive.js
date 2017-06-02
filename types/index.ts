@@ -1,4 +1,4 @@
-import userdive from '../lib'
+import userdive = require('../lib')
 
 const _ud = userdive()
 
