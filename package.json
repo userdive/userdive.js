@@ -59,6 +59,6 @@
     "test:build": "npm-run-all clean build",
     "test:karma": "karma start --single-run",
     "test:lint": "npm-run-all -p lint:*",
-    "test:ts": "tsc types/index.ts --allowJs --noEmit --noImplicitAny types/index.ts"
+    "test:ts": "tsc"
   }
 }

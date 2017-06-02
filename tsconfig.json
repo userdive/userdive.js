@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": [
+    "types/index.ts"
+  ]
+}
