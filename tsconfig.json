@@ -3,9 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "noImplicitAny": true,
+    "strictNullChecks": true,
     "noEmit": true
   },
-  "include": [
+  "files": [
     "types/index.ts"
   ],
   "compileOnSave": false
