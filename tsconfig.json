@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "strictNullChecks": true,
+    "noEmit": false,
     "lib": [
       "es2015"
     ]

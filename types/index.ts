@@ -1,19 +1,18 @@
 // import userdive = require('../lib')
 
 // const _ud = userdive()
-
-// _ud('create', 'id', 'auto')
-// _ud('send', 'pageview')
-
 declare var exports: any
 declare var document: any
 declare var window: any
+declare var _ud: any
+
+factory('name', 'source')
+_ud('create', 'id', 'auto')
+_ud('send', 'pageview')
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.inject = inject;
-exports.default = factory;
 /*! userdive | Copyright (c) UNCOVER TRUTH Inc. */
 
 var TAG_NAME = 'script';
