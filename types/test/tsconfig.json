@@ -4,9 +4,9 @@
     "allowSyntheticDefaultImports": true,
     "lib": [
       "es5",
-     "dom",
-     "es2015.promise",
-     "es2015.core"
+      "dom",
+      "es2015.promise",
+      "es2015.core"
     ],
     "module": "commonjs",
     "noImplicitAny": false,
