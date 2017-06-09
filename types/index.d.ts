@@ -5,6 +5,7 @@ declare namespace USERDIVE {
 
   type commandCreate = 'create'
   type commandSend = 'send'
+  type commandSet = 'set'
   type sendType = 'pageview'
 
   interface USERDIVEAgent {
@@ -17,6 +18,206 @@ declare namespace USERDIVE {
       command: commandSend,
       type: sendType,
       page?: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension1',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension2',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension3',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension4',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension5',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension6',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension7',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension8',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension9',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension10',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension11',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension12',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension13',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension14',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension15',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension16',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension17',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension18',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension19',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'dimension20',
+      value: string
+    )
+    (
+      command: commandSet,
+      key: 'metric1',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric2',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric3',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric4',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric5',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric6',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric7',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric8',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric9',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric10',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric11',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric12',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric13',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric14',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric15',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric16',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric17',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric18',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric19',
+      value: number
+    )
+    (
+      command: commandSet,
+      key: 'metric20',
+      value: number
     )
   }
 }
