@@ -28,7 +28,7 @@
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
     "npm-run-all": "^4.0.2",
-    "power-assert": "^1.4.3",
+    "power-assert": "^1.4.4",
     "rimraf": "^2.6.1",
     "typescript": "^2.3.4",
     "webpack": "^2.6.1"
