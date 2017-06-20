@@ -5,11 +5,17 @@ import assert from 'assert'
 
 import userdive from '../src'
 
+const DEFAULT_NAME = '_ud'
+
 describe('aync loader', () => {
-  const _ud = userdive()
   const NAMESPACE = `data-ud-namespace`
 
+  it('undefined', () => {
+    assert(window[DEFAULT_NAME] === undefined)
+  })
+
   it('entrypoint', () => {
+    const _ud = userdive()
     assert(typeof _ud === 'function')
     assert(_ud('create', 'id', 'auto') === undefined)
     assert(_ud('send', 'pageview', internet.url()) === undefined)
