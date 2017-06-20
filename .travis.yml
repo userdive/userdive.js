@@ -10,6 +10,7 @@ addons:
     - google-chrome-stable
 node_js:
 - stable
+- 7
 - 6
 cache:
   yarn: true
@@ -21,6 +22,7 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 - sleep 3
 after_success:
+- npm run coverage
 - npm run build
 deploy:
   provider: npm
