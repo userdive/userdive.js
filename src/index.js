@@ -16,7 +16,7 @@ export function inject (source: string, attributes: Object) {
   script.parentNode.insertBefore(element, script)
 }
 
-export function queue (name: string, global: any) {
+export function q (name: string, global: any) {
   global[name] =
     global[name] ||
     function () {
@@ -33,5 +33,5 @@ export default function (name: ?string, source: ?string, global: any): Function 
     return global[name]
   }
   inject(source, { 'data-ud-namespace': name })
-  return queue(name, global)
+  return q(name, global)
 }
