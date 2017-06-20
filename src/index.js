@@ -16,15 +16,22 @@ export function inject (source: string, attributes: Object) {
   script.parentNode.insertBefore(element, script)
 }
 
-export default function factory (name: ?string, source: ?string): Function {
+export function queue (name: string, global: any) {
+  global[name] =
+    global[name] ||
+    function () {
+      ;(global[name].q = global[name].q || []).push(arguments)
+    }
+  return global[name]
+}
+
+export default function (name: ?string, source: ?string, global: any): Function {
   name = name || '_ud'
   source = source || 'https://cdn.userdive.com/agent.js'
-  const global = window
-  if (!global[name]) {
-    global[name] = global[name] || function () {
-      (global[name].q = global[name].q || []).push(arguments)
-    }
-    inject(source, {'data-ud-namespace': name})
+  global = global || window
+  if (global[name]) {
+    return global[name]
   }
-  return global[name]
+  inject(source, { 'data-ud-namespace': name })
+  return queue(name, global)
 }
