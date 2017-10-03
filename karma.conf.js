@@ -6,10 +6,14 @@ module.exports = function (config) {
       'text/x-typescript': ['ts', 'tsx']
     },
     basePath: '',
-    frameworks: ['mocha'],
-    files: [{ pattern: 'test/*.test.ts' }],
+    frameworks: ['mocha', 'karma-typescript'],
+    files: [
+      { pattern: 'src/*.ts' },
+      { pattern: 'test/**.test.ts' }
+    ],
     preprocessors: {
-      'test/*.test.ts': ['webpack']
+      'src/*.ts': ['karma-typescript', 'coverage'],
+      'test/*.test.ts': ['karma-typescript']
     },
     webpack: {
       devtool: webpackConfig.devtool,
@@ -18,6 +22,9 @@ module.exports = function (config) {
       },
       node: { fs: 'empty' },
       resolve: webpackConfig.resolve
+    },
+    karmaTypescriptConfig: {
+      tsconfig: "./tsconfig.test.json"
     },
     webpackMiddleware: {
       noInfo: true,
@@ -29,7 +36,7 @@ module.exports = function (config) {
     coverageReporter: {
       reporters: [{ type: 'lcov' }, { type: 'text' }]
     },
-    reporters: ['mocha', 'coverage'],
+    reporters: ['mocha', 'coverage', 'karma-typescript'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
