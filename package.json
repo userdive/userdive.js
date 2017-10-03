@@ -30,7 +30,7 @@
     "karma-mocha-reporter": "^2.2.3",
     "karma-webpack": "^2.0.3",
     "lint-staged": "^4.0.0",
-    "mocha": "^3.4.2",
+    "mocha": "^4.0.0",
     "npm-run-all": "^4.0.2",
     "power-assert": "^1.4.4",
     "prettier-eslint-cli": "^4.1.1",
