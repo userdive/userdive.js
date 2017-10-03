@@ -1,6 +1,5 @@
 /*! userdive | Copyright (c) UNCOVER TRUTH Inc. */
 
-/* @flow */
 const TAG_NAME = 'script'
 
 export function inject (source: string, attributes: Object) {
@@ -20,12 +19,12 @@ export function q (name: string, global: any) {
   global[name] =
     global[name] ||
     function () {
-      ;(global[name].q = global[name].q || []).push(arguments)
+      (global[name].q = global[name].q || []).push(arguments)
     }
   return global[name]
 }
 
-export default function (name: ?string, source: ?string, global: any): Function {
+export default function (name: any, source: any, global: any): Function {
   name = name || '_ud'
   source = source || 'https://cdn.userdive.com/agent.js'
   global = global || window

@@ -2,21 +2,27 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['mocha'],
-    files: [{ pattern: 'test/*.test.js' }],
+    files: [{ pattern: 'test/*.test.ts' }],
     preprocessors: {
-      'test/*.test.js': ['webpack']
+      'test/*.test.ts': ['webpack']
     },
     webpack: {
+      resolve: {
+        extensions: ['.ts', '.tsx', '.js']
+      },
       module: {
         rules: [
           {
-            test: /\.js$/,
-            use: 'babel-loader',
+            test: /\.tsx?$/,
+            use: 'ts-loader',
             exclude: /node_modules/
           }
         ]
       },
-      node: { fs: 'empty' }
+      node: {
+        child_process: 'empty',
+        fs: 'empty'
+      }
     },
     webpackMiddleware: {
       noInfo: true,

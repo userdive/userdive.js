@@ -1,7 +1,6 @@
-/* @flow */
-import { describe, it } from 'mocha'
+import * as mocha from 'mocha'
 import { internet } from 'faker'
-import assert from 'assert'
+import * as assert from 'assert'
 
 import userdive from '../src'
 
@@ -15,7 +14,7 @@ describe('aync loader', () => {
   })
 
   it('entrypoint', () => {
-    const _ud = userdive()
+    const _ud = userdive('', '', '')
     assert(typeof _ud === 'function')
     assert(_ud('create', 'id', 'auto') === undefined)
     assert(_ud('send', 'pageview', internet.url()) === undefined)
