@@ -1,5 +1,10 @@
+const webpackConfig = require('./webpack.config')
+
 module.exports = function (config) {
   config.set({
+    mime: {
+      'text/x-typescript': ['ts', 'tsx']
+    },
     basePath: '',
     frameworks: ['mocha'],
     files: [{ pattern: 'test/*.test.ts' }],
@@ -7,22 +12,12 @@ module.exports = function (config) {
       'test/*.test.ts': ['webpack']
     },
     webpack: {
-      resolve: {
-        extensions: ['.ts', '.tsx', '.js']
-      },
+      devtool: webpackConfig.devtool,
       module: {
-        rules: [
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/
-          }
-        ]
+        rules: webpackConfig.module.rules,
       },
-      node: {
-        child_process: 'empty',
-        fs: 'empty'
-      }
+      node: { fs: 'empty' },
+      resolve: webpackConfig.resolve
     },
     webpackMiddleware: {
       noInfo: true,

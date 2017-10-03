@@ -2,17 +2,18 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    userdive: path.join(__dirname, 'src/index.ts')
+    index: path.join(__dirname + '/src/index.ts')
   },
   output: {
-    path: path.join(__dirname, 'lib/build/'),
+    path: path.join(__dirname, '/build/'),
     filename: '[name].js',
     sourceMapFilename: '[name].js.map'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
+  devtool: 'inline-source-map',
   module: {
-    loaders: [{ test: /\.tsx?$/, loader: 'ts-loader' }]
+    rules: [{ test: /\.tsx?$/, use: 'ts-loader' }]
   }
 }
