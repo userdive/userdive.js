@@ -1,21 +1,24 @@
-/* @flow */
-import { describe, it } from 'mocha'
+import * as mocha from 'mocha'
 import { internet } from 'faker'
-import assert from 'assert'
+import * as assert from 'assert'
 
 import userdive from '../src'
 
 const DEFAULT_NAME = '_ud'
 
+interface IWindow {
+  [key: string]: any
+}
+
 describe('aync loader', () => {
   const NAMESPACE = `data-ud-namespace`
 
   it('undefined', () => {
-    assert(window[DEFAULT_NAME] === undefined)
+    assert((window as IWindow)[DEFAULT_NAME] === undefined)
   })
 
   it('entrypoint', () => {
-    const _ud = userdive()
+    const _ud = userdive('', '', '')
     assert(typeof _ud === 'function')
     assert(_ud('create', 'id', 'auto') === undefined)
     assert(_ud('send', 'pageview', internet.url()) === undefined)
