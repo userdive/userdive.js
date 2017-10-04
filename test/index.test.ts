@@ -6,11 +6,15 @@ import userdive from '../src'
 
 const DEFAULT_NAME = '_ud'
 
+interface IWindow {
+  [key: string]: any
+}
+
 describe('aync loader', () => {
   const NAMESPACE = `data-ud-namespace`
 
   it('undefined', () => {
-    assert(window[DEFAULT_NAME] === undefined)
+    assert((window as IWindow)[DEFAULT_NAME] === undefined)
   })
 
   it('entrypoint', () => {

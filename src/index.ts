@@ -2,7 +2,9 @@
 
 const TAG_NAME = 'script'
 
-export function inject (source: string, attributes: Object) {
+export interface IAttributes { [key: string]: any }
+
+export function inject (source: string, attributes: IAttributes) {
   const element: any = document.createElement(TAG_NAME)
   const script: any = document.getElementsByTagName(TAG_NAME)[0]
   element.async = 1
@@ -24,7 +26,11 @@ export function q (name: string, global: any) {
   return global[name]
 }
 
-export default function (name: any, source: any, global: any): Function {
+export default function (
+  name?: string,
+  source?: string,
+  global?: any
+): Function {
   name = name || '_ud'
   source = source || 'https://cdn.userdive.com/agent.js'
   global = global || window

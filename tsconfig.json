@@ -10,7 +10,7 @@
       "es2015.promise"
     ],
     "strict": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "strictNullChecks": true,
     "noEmit": false,
     "declaration": true,

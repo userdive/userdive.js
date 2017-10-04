@@ -1,6 +1,6 @@
 const webpackConfig = require('./webpack.config')
 
-module.exports = function (config) {
+module.exports = (config: any) => {
   config.set({
     mime: {
       'text/x-typescript': ['ts', 'tsx']
