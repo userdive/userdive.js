@@ -1,4 +1,4 @@
-const webpackConfig = require('./webpack.config')
+const { devtool, module: { rules }, resolve } = require('./webpack.config')
 
 module.exports = (config: any) => {
   config.set({
@@ -13,12 +13,12 @@ module.exports = (config: any) => {
       'test/*.test.ts': ['karma-typescript']
     },
     webpack: {
-      devtool: webpackConfig.devtool,
+      devtool,
       module: {
-        rules: webpackConfig.module.rules
+        rules
       },
       node: { fs: 'empty' },
-      resolve: webpackConfig.resolve
+      resolve
     },
     karmaTypescriptConfig: {
       tsconfig: './tsconfig.test.json'
