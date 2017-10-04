@@ -7,10 +7,7 @@ module.exports = function (config) {
     },
     basePath: '',
     frameworks: ['mocha', 'karma-typescript'],
-    files: [
-      { pattern: 'src/*.ts' },
-      { pattern: 'test/**.test.ts' }
-    ],
+    files: [{ pattern: 'src/*.ts' }, { pattern: 'test/**.test.ts' }],
     preprocessors: {
       'src/*.ts': ['karma-typescript', 'coverage'],
       'test/*.test.ts': ['karma-typescript']
@@ -18,13 +15,13 @@ module.exports = function (config) {
     webpack: {
       devtool: webpackConfig.devtool,
       module: {
-        rules: webpackConfig.module.rules,
+        rules: webpackConfig.module.rules
       },
       node: { fs: 'empty' },
       resolve: webpackConfig.resolve
     },
     karmaTypescriptConfig: {
-      tsconfig: "./tsconfig.test.json"
+      tsconfig: './tsconfig.test.json'
     },
     webpackMiddleware: {
       noInfo: true,
