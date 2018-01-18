@@ -10,40 +10,16 @@
   version "1.2.30"
   resolved "https://registry.yarnpkg.com/@types/empower/-/empower-1.2.30.tgz#c7cfc14b3a61e54c74c674c1fbc91ba2df0d1392"
 
-"@types/express-serve-static-core@*":
-  version "4.0.53"
-  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.53.tgz#1723a35d1447f2c55e13c8721eab3448e42f4d82"
-  dependencies:
-    "@types/node" "*"
-
-"@types/express@*":
-  version "4.0.37"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.37.tgz#625ac3765169676e01897ca47011c26375784971"
-  dependencies:
-    "@types/express-serve-static-core" "*"
-    "@types/serve-static" "*"
-
 "@types/faker@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@types/faker/-/faker-4.1.1.tgz#989666efde54c07b7f960a552b5fceb5d5e570e0"
 
-"@types/karma@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-1.7.0.tgz#b36b2023e364adad0aa5b872bbb9cab71cbe29fc"
+"@types/karma@^1.7.3":
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-1.7.3.tgz#bc286bcd64b9abfda86ceb9e3e89a15862c34b06"
   dependencies:
     "@types/bluebird" "*"
-    "@types/log4js" "*"
     "@types/node" "*"
-
-"@types/log4js@*":
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/@types/log4js/-/log4js-0.0.33.tgz#8f9813805c5bac90f028b12c467f6607087a3128"
-  dependencies:
-    "@types/express" "*"
-
-"@types/mime@*":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
 
 "@types/mocha@^2.2.43":
   version "2.2.43"
@@ -67,13 +43,6 @@
   dependencies:
     "@types/empower" "*"
     "@types/power-assert-formatter" "*"
-
-"@types/serve-static@*":
-  version "1.7.32"
-  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.7.32.tgz#0f6732e4dab0813771dd8fc8fe14940f34728b4c"
-  dependencies:
-    "@types/express-serve-static-core" "*"
-    "@types/mime" "*"
 
 "@types/strip-bom@^3.0.0":
   version "3.0.0"
