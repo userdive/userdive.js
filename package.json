@@ -32,7 +32,6 @@
     "lint-staged": "^6.0.1",
     "mocha": "^5.0.0",
     "node-gyp": "^3.6.2",
-    "npm-run-all": "^4.1.2",
     "power-assert": "^1.4.4",
     "prettier-eslint-cli": "^4.7.0",
     "rimraf": "^2.6.2",
@@ -60,7 +59,6 @@
     ]
   },
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/userdive/userdive.js.git"
@@ -69,12 +67,10 @@
     "appveyor": "karma start --single-run --browsers=IE",
     "build": "cross-env NODE_ENV=production tsc",
     "clean": "rimraf lib coverage build",
-    "coverage": "codecov -t $CODECOV_TOKEN -f ./coverage/Chrome*/lcov.info",
+    "coverage": "codecov -f ./coverage/Chrome*/lcov.info",
     "lint": "tslint {src,test}/**/*.ts",
     "precommit": "lint-staged",
-    "test": "run-p  test:*",
-    "test:build": "run-s clean build",
-    "test:karma": "karma start --single-run",
-    "test:lint": "npm run lint"
-  }
+    "test": "karma start --single-run"
+  },
+  "types": "lib/index.d.ts"
 }
