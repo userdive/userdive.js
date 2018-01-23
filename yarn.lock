@@ -184,10 +184,6 @@ align-text@^0.1.1, align-text@^0.1.3:
     longest "^1.0.1"
     repeat-string "^1.5.2"
 
-amdefine@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.0.tgz#fd17474700cb5cc9c2b709f0be9d23ce3c198c33"
-
 amdefine@>=0.0.4, amdefine@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -477,10 +473,6 @@ base64-arraybuffer@0.1.5:
 base64-js@^1.0.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
-
-base64-js@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.1.tgz#a91947da1f4a516ea38e5b4ec0ec3773675e0886"
 
 base64id@1.0.0:
   version "1.0.0"
@@ -1016,6 +1008,10 @@ clone@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.2.tgz#260b7a99ebb1edfe247538175f783243cb19d149"
 
+clone@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.3.tgz#298d7e2231660f40c003c2ed3140decf3f53085f"
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -1402,6 +1398,12 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
+defaults@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
+  dependencies:
+    clone "^1.0.2"
+
 define-properties@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
@@ -1705,10 +1707,6 @@ es6-map@^0.1.3:
     es6-set "~0.1.5"
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
-
-es6-promise@^4.0.5:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.1.1.tgz#8811e90915d9a0dba36274f0b242dbda78f9c92a"
 
 es6-set@~0.1.5:
   version "0.1.5"
@@ -2842,7 +2840,7 @@ iconv-lite@^0.4.17:
   version "0.4.18"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
 
-ieee754@^1.1.4, ieee754@^1.1.8:
+ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
@@ -3392,15 +3390,13 @@ karma-mocha@^1.3.0:
   dependencies:
     minimist "1.2.0"
 
-karma-typescript@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.7.tgz#ce2c538f66ddd2285c30a694af24430b590559f0"
+karma-typescript@^3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/karma-typescript/-/karma-typescript-3.0.9.tgz#3d3fd54e2fb28d84dd9c22946525bfec90606078"
   dependencies:
     acorn "^4.0.4"
-    amdefine "1.0.0"
     assert "^1.4.1"
     async "^2.1.4"
-    base64-js "^1.2.1"
     browser-resolve "^1.11.0"
     browserify-zlib "^0.2.0"
     buffer "^5.0.6"
@@ -3411,22 +3407,17 @@ karma-typescript@^3.0.7:
     crypto-browserify "^3.11.1"
     diff "^3.2.0"
     domain-browser "^1.1.7"
-    es6-promise "^4.0.5"
     events "^1.1.1"
     glob "^7.1.1"
-    gulp-util "3.0.7"
     https-browserify "^1.0.0"
-    ieee754 "^1.1.8"
-    isarray "^1.0.0"
     istanbul "0.4.5"
     json-stringify-safe "^5.0.1"
     karma-coverage "^1.1.1"
     lodash "^4.17.4"
     log4js "^1.1.1"
-    magic-string "^0.19.0"
     minimatch "^3.0.3"
     os-browserify "^0.3.0"
-    pad "^1.1.0"
+    pad "^2.0.0"
     path-browserify "0.0.0"
     process "^0.11.10"
     punycode "^1.4.1"
@@ -3437,7 +3428,6 @@ karma-typescript@^3.0.7:
     stream-browserify "^2.0.1"
     stream-http "^2.7.2"
     string_decoder "^1.0.3"
-    through2 "2.0.1"
     timers-browserify "^2.0.2"
     tmp "0.0.29"
     tty-browserify "0.0.0"
@@ -3896,12 +3886,6 @@ lru-cache@^4.0.1:
 lru-cache@~2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.6.5.tgz#e56d6354148ede8d7707b58d143220fd08df0fd5"
-
-magic-string@^0.19.0:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.19.1.tgz#14d768013caf2ec8fdea16a49af82fc377e75201"
-  dependencies:
-    vlq "^0.2.1"
 
 mailcomposer@4.0.1:
   version "4.0.1"
@@ -4561,9 +4545,11 @@ pac-resolver@~2.0.0:
     netmask "~1.0.4"
     thunkify "~2.1.1"
 
-pad@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pad/-/pad-1.1.0.tgz#7a7d185200ebac32f9f12ee756c3a1d087b3190b"
+pad@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/pad/-/pad-2.0.3.tgz#e2b877496c5576c299ee3df93bee95b76532dffb"
+  dependencies:
+    wcwidth "^1.0.1"
 
 pako@~0.2.0:
   version "0.2.9"
@@ -6392,10 +6378,6 @@ vinyl@^0.5.0:
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
 
-vlq@^0.2.1:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
-
 vm-browserify@0.0.4, vm-browserify@~0.0.1:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
@@ -6413,6 +6395,12 @@ watchpack@^1.4.0:
     async "^2.1.2"
     chokidar "^1.7.0"
     graceful-fs "^4.1.2"
+
+wcwidth@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
+  dependencies:
+    defaults "^1.0.3"
 
 webpack-dev-middleware@^1.12.0:
   version "1.12.0"
