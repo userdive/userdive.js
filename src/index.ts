@@ -2,7 +2,9 @@
 
 const TAG_NAME = 'script'
 
-export interface IAttributes { [key: string]: any }
+export interface IAttributes {
+  [key: string]: any
+}
 
 export function inject (source: string, attributes: IAttributes) {
   const element: any = document.createElement(TAG_NAME)
