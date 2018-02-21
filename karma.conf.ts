@@ -1,27 +1,32 @@
-const { devtool, module: { rules }, resolve } = require('./webpack.config')
+const { module: { rules }, resolve } = require('./webpack.config')
 
 module.exports = (config: any) => {
   config.set({
     mime: {
-      'text/x-typescript': ['ts', 'tsx']
+      'text/x-typescript': ['ts']
     },
-    basePath: '',
-    frameworks: ['mocha', 'karma-typescript'],
-    files: [{ pattern: 'src/*.ts' }, { pattern: 'test/**.test.ts' }],
+    frameworks: ['mocha'],
+    files: [{ pattern: 'test/**.test.ts' }],
     preprocessors: {
-      'src/*.ts': ['karma-typescript', 'coverage'],
-      'test/*.test.ts': ['karma-typescript']
+      'test/*.test.ts': ['webpack']
     },
     webpack: {
-      devtool,
       module: {
-        rules
+        rules: [
+          {
+            test: /\.ts$/,
+            use: ['webpack-espower-loader', 'ts-loader']
+          },
+          {
+            test: /\.ts$/,
+            enforce: 'post',
+            use: { loader: 'istanbul-instrumenter-loader' },
+            exclude: [/node_modules/, /test/]
+          }
+        ]
       },
       node: { fs: 'empty' },
       resolve
-    },
-    karmaTypescriptConfig: {
-      tsconfig: './tsconfig.test.json'
     },
     webpackMiddleware: {
       noInfo: true,
@@ -30,16 +35,13 @@ module.exports = (config: any) => {
         colors: true
       }
     },
-    coverageReporter: {
-      reporters: [{ type: 'lcov' }, { type: 'text' }]
+    coverageIstanbulReporter: {
+      reports: ['html', 'lcovonly', 'text-summary']
     },
-    reporters: ['mocha', 'coverage', 'karma-typescript'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome', 'Firefox'],
-    singleRun: true,
-    concurrency: Infinity
+    mochaReporter: {
+      showDiff: true
+    },
+    reporters: ['mocha', 'coverage-istanbul'],
+    browsers: ['Chrome', 'Firefox']
   })
 }
