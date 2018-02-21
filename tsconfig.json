@@ -12,11 +12,15 @@
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "noEmit": false,
+    "noImplicitThis": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "declaration": true,
     "sourceMap": true,
-    "baseUrl": "./",
-    "paths": {},
     "outDir": "./lib"
   },
   "include": [

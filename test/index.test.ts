@@ -1,6 +1,6 @@
 import * as assert from 'assert'
 import { internet } from 'faker'
-import * as mocha from 'mocha'
+import 'mocha'
 
 import userdive from '../src'
 

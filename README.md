@@ -1,6 +1,11 @@
 # userdive
 
-[![npm version](https://badge.fury.io/js/userdive.svg)](https://www.npmjs.com/package/userdive) [![Build Shttps://badge.fury.io/js/userdivetatus][travis-image]][travis-url] [![codecov](https://codecov.io/gh/userdive/userdive.js/branch/master/graph/badge.svg)](https://codecov.io/gh/userdive/userdive.js) [![Build status][appveyor-image]][appveyor-url] [![dependencies Status](https://david-dm.org/userdive/userdive.js/status.svg)](https://david-dm.org/userdive/userdive.js) [![devDependencies Status](https://david-dm.org/userdive/userdive.js/dev-status.svg)](https://david-dm.org/userdive/userdive.js?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/userdive/userdive.js.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/userdive.svg)](https://www.npmjs.com/package/userdive)
+[![Build Shttps://badge.fury.io/js/userdivetatus][travis-image]][travis-url]
+[![codecov](https://codecov.io/gh/userdive/userdive.js/branch/master/graph/badge.svg)](https://codecov.io/gh/userdive/userdive.js)
+[![Build status][appveyor-image]][appveyor-url]
+[![dependencies Status](https://david-dm.org/userdive/userdive.js/status.svg)](https://david-dm.org/userdive/userdive.js)
+[![devDependencies Status](https://david-dm.org/userdive/userdive.js/dev-status.svg)](https://david-dm.org/userdive/userdive.js?type=dev)
 
 > TBA
 
