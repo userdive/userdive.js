@@ -38,7 +38,7 @@
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",
     "typescript-eslint-parser": "^14.0.0",
-    "webpack": "^3.11.0",
+    "webpack": "^4.0.0",
     "webpack-dev-middleware": "^2.0.5",
     "webpack-espower-loader": "^1.0.2"
   },
